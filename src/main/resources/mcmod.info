@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ocic2drivers",
+  "name": "OC IC2-Drivers",
+  "description": "Additional OpenComputer drivers for IC2",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["raymondbh"],
+  "credits": "raymondbh",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
