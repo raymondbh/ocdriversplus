@@ -15,5 +15,6 @@ public class OCIC2Drivers
     public void init(FMLInitializationEvent event)
     {
         Driver.add(new DriverBoiler());
+        Driver.add(new DriverIETank());
     }
 }
