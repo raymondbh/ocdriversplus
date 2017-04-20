@@ -1,11 +1,12 @@
 package org.rbh.ocic2drivers;
 
 import li.cil.oc.api.Driver;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid = OCIC2Drivers.MODID, version = OCIC2Drivers.VERSION, serverSideOnly = true, acceptableRemoteVersions = "*")
+@Mod(modid = OCIC2Drivers.MODID, version = OCIC2Drivers.VERSION, serverSideOnly = true, acceptableRemoteVersions = "*", dependencies = "after:OpenComputers")
 public class OCIC2Drivers
 {
     public static final String MODID = "ocic2drivers";
@@ -14,7 +15,11 @@ public class OCIC2Drivers
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        Driver.add(new DriverBoiler());
-        Driver.add(new DriverIETank());
+        if(Loader.isModLoaded("IC2")){
+            Driver.add(new DriverBoiler());
+        }
+        if(Loader.isModLoaded("immersiveengineering")) {
+            Driver.add(new DriverIETank());
+        }
     }
 }
