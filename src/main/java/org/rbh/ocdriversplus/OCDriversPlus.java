@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
 
 
-@Mod(modid = OCDriversPlus.MODID, version = OCDriversPlus.VERSION, useMetadata = true, acceptableRemoteVersions = "*", serverSideOnly = true)
+@Mod(modid = OCDriversPlus.MODID, version = OCDriversPlus.VERSION, useMetadata = true, acceptableRemoteVersions = "*")
 public class OCDriversPlus
 {
     public static final String MODID = "@MOD_ID@";
@@ -19,6 +19,7 @@ public class OCDriversPlus
     {
         if(Loader.isModLoaded("IC2")){
             Driver.add(new DriverBoiler());
+            Driver.add(new DriverFluidReactor());
         }
         if(Loader.isModLoaded("immersiveengineering")) {
             Driver.add(new DriverIETank());
