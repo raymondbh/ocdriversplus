@@ -11,8 +11,18 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the nessasary things for Forge to be setup.
 apply plugin: 'idea'
 
-version = "1.0"
-group= "org.rbh.ocic2drivers"
+// define the properties file
+ext.configFile = file "build.properties"
+
+configFile.withReader {
+    // read config.  it shall from now on be referenced as simply config or as project.config
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
+version = config.version
+group= config.group
 archivesBaseName = "OCIC2Drivers"
 
 sourceCompatibility = targetCompatibility = "1.8" // Need this here so eclipse task generates correctly.
@@ -21,9 +31,13 @@ compileJava {
 }
 
 minecraft {
-    version = "1.10.2-12.18.3.2185"
+    version = config.forge_version
     runDir = "run"
     
+	replaceIn "OCIC2Drivers.java"
+		replace "@MOD_ID@", config.modid
+        replace "@MOD_VERSION@", config.version
+	
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
     // stable_#            stables are built at the discretion of the MCP team.

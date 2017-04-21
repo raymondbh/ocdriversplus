@@ -8,9 +8,9 @@
   "url": "",
   "updateUrl": "",
   "authorList": ["raymondbh"],
-  "credits": "raymondbh",
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["after:OpenComputers"]
 }
 ]
