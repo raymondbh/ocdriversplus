@@ -1,4 +1,4 @@
-package org.rbh.ocic2drivers;
+package org.rbh.ocdriversplus;
 
 import li.cil.oc.api.Driver;
 import net.minecraftforge.fml.common.Loader;
@@ -8,8 +8,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
 
 
-@Mod(modid = OCIC2Drivers.MODID, version = OCIC2Drivers.VERSION, useMetadata = true, acceptableRemoteVersions = "*", serverSideOnly = true)
-public class OCIC2Drivers
+@Mod(modid = OCDriversPlus.MODID, version = OCDriversPlus.VERSION, useMetadata = true, acceptableRemoteVersions = "*", serverSideOnly = true)
+public class OCDriversPlus
 {
     public static final String MODID = "@MOD_ID@";
     public static final String VERSION = "@MOD_VERSION@";

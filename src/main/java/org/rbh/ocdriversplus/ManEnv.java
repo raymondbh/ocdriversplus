@@ -1,4 +1,4 @@
-package org.rbh.ocic2drivers;
+package org.rbh.ocdriversplus;
 
 import li.cil.oc.api.Network;
 import li.cil.oc.api.network.Visibility;

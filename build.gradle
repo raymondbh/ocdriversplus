@@ -23,7 +23,7 @@ configFile.withReader {
 
 version = config.version
 group= config.group
-archivesBaseName = "OCIC2Drivers"
+archivesBaseName = config.archivesbasename
 
 sourceCompatibility = targetCompatibility = "1.8" // Need this here so eclipse task generates correctly.
 compileJava {
@@ -34,7 +34,7 @@ minecraft {
     version = config.forge_version
     runDir = "run"
     
-	replaceIn "OCIC2Drivers.java"
+	replaceIn config.archivesbasename + ".java"
 		replace "@MOD_ID@", config.modid
         replace "@MOD_VERSION@", config.version
 	

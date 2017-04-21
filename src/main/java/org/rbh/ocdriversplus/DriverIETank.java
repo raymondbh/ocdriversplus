@@ -1,4 +1,4 @@
-package org.rbh.ocic2drivers;
+package org.rbh.ocdriversplus;
 
 import blusunrize.immersiveengineering.common.blocks.metal.TileEntitySheetmetalTank;
 import li.cil.oc.api.driver.NamedBlock;

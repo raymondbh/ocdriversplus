@@ -1,4 +1,4 @@
-package org.rbh.ocic2drivers;
+package org.rbh.ocdriversplus;
 
 import ic2.core.block.machine.tileentity.TileEntitySteamGenerator;
 import li.cil.oc.api.driver.NamedBlock;
