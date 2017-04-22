@@ -1,5 +1,6 @@
 # About
-Server side Minecraft mod that adds additional drivers for OpenComputers.
+A Minecraft mod that adds additional drivers for OpenComputers.
+Only required on server side if not used single player.
 
 
 
