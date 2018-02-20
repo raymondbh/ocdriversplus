@@ -1,8 +1,8 @@
 [
 {
   "modid": "ocic2drivers",
-  "name": "OC IC2-Drivers",
-  "description": "Additional OpenComputer drivers for IC2",
+  "name": "OCDriversPlus",
+  "description": "Additional Drivers for OpenComputers",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",

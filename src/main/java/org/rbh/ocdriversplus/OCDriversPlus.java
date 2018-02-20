@@ -7,7 +7,6 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
 
-
 @Mod(modid = OCDriversPlus.MODID, version = OCDriversPlus.VERSION, useMetadata = true, acceptableRemoteVersions = "*")
 public class OCDriversPlus
 {
@@ -17,7 +16,7 @@ public class OCDriversPlus
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        if(Loader.isModLoaded("IC2")){
+        if(Loader.isModLoaded("ic2")){
             Driver.add(new DriverBoiler());
             Driver.add(new DriverFluidReactor());
         }
