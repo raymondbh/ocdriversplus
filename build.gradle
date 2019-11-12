@@ -43,18 +43,20 @@ minecraft {
     // stable_#            stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not allways work.
     // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "snapshot_20171003"
+    mappings = "snapshot_20170624"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
 repositories {
-
+    maven { // IE
+        name "jared maven"
+        url "https://maven.blamejared.com"
+    }
     maven { // OpenComputers
         name "OpenComputers"
         url "http://maven.cil.li/"
     }
-
-    maven {
+    maven { //Industrial Craft
         name = "ic2"
         url = "http://maven.ic2.player.to/"
     }
@@ -69,8 +71,7 @@ dependencies {
     // real examples
     //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
     //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
-
-	compile files("lib/ImmersiveEngineering-0.12-77-deobf.jar")
+    //compile files("lib/ImmersiveEngineering-0.12-77-deobf.jar")
 
     // the 'provided' configuration is for optional dependencies that exist at compile-time but might not at runtime.
     //provided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
@@ -79,8 +80,9 @@ dependencies {
     // except that these dependencies get remapped to your current MCP mappings
     //deobfCompile 'com.mod-buildcraft:buildcraft:6.0.8:dev'
     //deobfProvided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-    deobfCompile "li.cil.oc:OpenComputers:MC1.12.2-1.7.1.+"
-    deobfCompile 'net.industrial-craft:industrialcraft-2:2.8.54-ex112'
+    deobfCompile "li.cil.oc:OpenComputers:MC1.12.2-1.7.4.+"
+    deobfCompile 'net.industrial-craft:industrialcraft-2:2.8.187-ex112'
+    deobfCompile "blusunrize:ImmersiveEngineering:0.12-+"
 	
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
