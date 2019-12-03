@@ -47,17 +47,27 @@ public class DriverIETank extends DriverSidedTileEntity {
                 return new Object[]{0};
             }
             return new Object[]{master.tank.getFluidAmount()};
-
         }
 
-        @Callback(doc = "function():number -- Returns amount in mb.")
+        @Callback(doc = "function():number -- Returns capacity in mb.")
         public Object[] getCapacity(final Context context, final Arguments args) {
             TileEntitySheetmetalTank master = tileEntity.master();
             if(master == null) {
                 return new Object[]{0};
             }
             return new Object[]{master.tank.getCapacity()};
+        }
 
+        @Callback(doc = "function():number -- Returns capacity in mb.")
+        public Object[] getFluid(final Context context, final Arguments args) {
+            TileEntitySheetmetalTank master = tileEntity.master();
+            if(master == null) {
+                return new Object[]{0};
+            }
+            if(master.tank.getFluidAmount() == 0){
+                return new Object[]{null};
+            }
+            return new Object[]{master.tank.getFluid()};
         }
     }
 }
