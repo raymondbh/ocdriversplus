@@ -19,6 +19,7 @@ public class OCDriversPlus
         if(Loader.isModLoaded("ic2")){
             Driver.add(new DriverBoiler());
             Driver.add(new DriverFluidReactor());
+            Driver.add(new DriverLiquidHeatExchanger());
         }
         if(Loader.isModLoaded("immersiveengineering")) {
             Driver.add(new DriverIETank());
