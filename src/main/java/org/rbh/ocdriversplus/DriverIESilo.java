@@ -45,5 +45,14 @@ public class DriverIESilo extends DriverSidedTileEntity {
             }
             return new Object[]{master.storageAmount};
         }
+
+        @Callback(doc = "function():number -- Returns amount in number of items.")
+        public Object[] getItemName(final Context context, final Arguments args) {
+            TileEntitySilo master = tileEntity.master();
+            if (master == null) {
+                return new Object[]{0};
+            }
+            return new Object[]{master.identStack.getDisplayName()};
+        }
     }
 }
