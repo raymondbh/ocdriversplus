@@ -13,4 +13,5 @@ Only required on server side if not used single player.
 ### Immersive Engineering
   - Tank
   - Metal Barrel
+  - Silo
 

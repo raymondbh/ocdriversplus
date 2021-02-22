@@ -24,6 +24,7 @@ public class OCDriversPlus
         if(Loader.isModLoaded("immersiveengineering")) {
             Driver.add(new DriverIETank());
             Driver.add(new DriverIEBarrel());
+            Driver.add(new DriverIESilo());
         }
     }
 }
